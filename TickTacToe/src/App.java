@@ -1,20 +1,12 @@
-/*
-Shlok Bhakta
-10/4/2021
-Tick Tac Toe 
- */
-package tictactoe1_shlokbhakta;
-
-
 import java.util.*;
 import javax.swing.*;
-import static tictactoe1_shlokbhakta.Status.*;
 
-public class TicTacToe1_ShlokBhakta {
 
-	public static void main(String[] args) {
-		//asking for 1 or 2 player mode
-		Status win = none;
+public class App {
+    
+    public static void main(String[] args) throws Exception {
+        		//asking for 1 or 2 player mode
+		Status win = Status.none;
 		int turn = 0;
 		String[] gameOptions = {"Solo(with bot)", "with a friend"};
 		int mode = JOptionPane.showOptionDialog(null, "Would you like to play alone or with a friend?", "Gamemode", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, gameOptions, gameOptions[0]);
@@ -34,13 +26,13 @@ public class TicTacToe1_ShlokBhakta {
 
 		//singleplayer
 		if (mode == 0) {
-			while (win == none) {
+			while (win == Status.none) {
 
 			}
 		}
 		//multiplayer
 		if (mode == 1) {
-			while (win == none) {
+			while (win == Status.none) {
 				//get available spaces
 				
 
@@ -153,3 +145,4 @@ public class TicTacToe1_ShlokBhakta {
 	
 	
 }
+
